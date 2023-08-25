@@ -1,0 +1,95 @@
+<html>
+    <head>        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <title>bookstore Harshini</title>
+        <script>
+	    
+            function validate() {
+                var name = document.forms.RegForm.Name.value;
+                var ad = document.forms.RegForm.address.value;
+                var pin = document.forms.RegForm.pincode.value;
+                var phone = document.forms.RegForm.phone.value;
+                var validName = /\d+$/g;							
+                 if(validName.test(name)){
+                    window.alert("Name should be alphabet");
+                    name.focus();
+                    return false;
+                }
+                else if (name == "") {
+                    window.alert("name should not be empty.");
+                    name.focus();
+                    return false;
+                }
+                else if (ad == "") {
+                    window.alert("address should not be empty.");
+                    ad.focus();
+                    return false;
+                } 
+                else if (pin == "") {
+                    window.alert("pincode should not be empty.");
+                    pin.focus();
+                    return false;
+                }
+                else if (phone == "") {
+                    window.alert("phone should not be empty.");
+                    phone.focus();
+                    return false;
+                }
+                else{
+                alert("Thank you! your book is ordered successfully");
+                var wp="../books%20webstie/index.html";
+	            window.open(wp);
+                }
+            }
+        </script>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        .btn{   
+            padding:.3rem 1rem;
+            font-size: 1rem;
+            color:white;
+            background-color: #13131a;  
+            border-radius: .5rem;
+        }
+        .btn:hover{
+            background:#c459bb;
+            border:none;
+        }
+        i:hover{
+            color:#d47acd;
+        }
+        body{
+            background-image: url(../image/Q.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <body align="center" background="image\HAI.jpg">
+        <h2 style="margin-top:10%"><b><i class="fas fa-book"></i>  Order Now</b></h2>
+        <form name="RegForm" onsubmit="return validate();" method="post" action=""><center>
+            <table border="0" width="25%" height="40%">
+                <tr>
+                    <th align="left">Name </th>
+                    <td><input type="text" name="Name" style="background-color: transparent;" required/></td>
+                </tr>
+                <tr>
+                    <th align="left" >Address</th>
+                    <td><input type="text" name="address" style="background-color: transparent;" required/></td>
+                </tr>
+                <tr>
+                    <th align="left">Pincode</th>
+                    <td><input type="text" name="pincode" style="background-color: transparent;" required/></td>
+                </tr>
+                <tr>
+                    <th align="left" >Phone No </th>
+                    <td><input type="text" name="phone" style="background-color: transparent;" required/></td>
+                </tr>
+            </table>    <br>
+            <input type="submit" value="Buy Now" name="submit" class="btn" />
+        </form>
+    </body> 
+</html>

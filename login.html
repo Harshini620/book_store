@@ -1,0 +1,65 @@
+<html>
+    <head>        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <title>bookstore Harshini</title>
+        <script>
+	    
+            function validate() {
+                var name = document.forms.RegForm.Name.value;
+            	var pw = document.forms.RegForm.Password.value;
+                var validName = /\d+$/g;							
+                 if(validName.test(name)){
+                    window.alert("Name should be alphabet");
+                    name.focus();
+                    return false;
+                }
+                else{
+                alert("Login Successfully! Welcome to the book world!");
+                var wp="index.html";
+	            window.open(wp)
+                }
+            }
+        </script>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        .btn{   
+            padding:.3rem 1rem;
+            font-size: 1rem;
+            color:white;
+            background-color: #13131a;  
+            border-radius: .5rem;
+        }
+        .btn:hover{
+            background:#c459bb;
+            border:none;
+        }
+        i:hover{
+            color:#d47acd;
+        }
+        body{
+            background-image: url(../image/Q.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <body align="center" background="image\HAI.jpg">
+        <h2 style="margin-top:15%"><b><i class="fas fa-book"></i> Log in</b></h2>
+        <form name="RegForm" onsubmit="return validate();" method="post" action="">
+            <table border="0" height="15%" align="center" width="20%">
+                <tr>
+                    <th align="left"><label>Username  </label></th>
+                    <td><input type="text" name="Name" style="background-color: transparent;" required/></td>
+                </tr>
+                <tr>
+                    <th align="left"><label>Password  </label></th>
+                    <td><input type="password" name="Password" style="background-color: transparent;"  required/></td>
+                </tr>
+            </table>    <br>
+            <input type="submit" value="LOGIN" name="submit" class="btn" />
+        </form>
+    </body> 
+</html>

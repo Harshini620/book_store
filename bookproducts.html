@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="css/bookproductscss.css">
+   <script src="js/bookproductsjs.js" defer></script>
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.buttons').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        var filter = $(this).attr('data-filter')
+        if(filter == 'all'){
+            $('.product').show(400);
+        }else{
+            $('.product').not('.'+filter).hide(200);
+            $('.product').filter('.'+filter).show(400);
+        }
+    });
+
+    $('.container').magnificPopup({
+        delegate:'div',
+        type:'image',
+        container:{
+            enabled:true
+        }
+    });
+});
+
+</script>
+<body>
+<div class="container">
+   <h3 class="title"> BOOKS COLLECTION </h3>
+   <ul class="controls">
+      <li class="buttons active" data-filter="all">all</li>
+      <li class="buttons" data-filter="adventure">adventure</li>
+      <li class="buttons" data-filter="comdey">comdey</li>
+      <li class="buttons" data-filter="fantasy">fantasy</li>
+      <li class="buttons" data-filter="horror">horror</li>
+      <li class="buttons" data-filter="history">history</li>
+  </ul>
+   <div class="products-container">
+      <div class="product adventure" data-name="p-1">
+         <img src="image/aladdin.png" alt="">
+         <h3>Aladdin</h3>
+         <div class="price">₹500</div>
+      </div>
+      <div class="product fantasy" data-name="p-2">
+         <img src="image/luca.jpg" alt="">
+         <h3>Luca: Adventure Awaits!</h3>
+         <div class="price">₹970</div>
+      </div>
+      <div class="product fantasy" data-name="p-3">
+         <img src="image/smthnglostfound.jpg" alt="">
+         <h3>Something Lost <br> Something Found</h3>
+         <div class="price">₹650</div>
+      </div>
+      <div class="product adventure" data-name="p-4">
+         <img src="image/journeystar.jpg" alt="">
+         <h3>Journey to the stars</h3>
+         <div class="price">₹450</div>
+      </div>
+      <div class="product fantasy" data-name="p-5">
+         <img src="image/frozen.jpg" alt="">
+         <h3>Frozen</h3>
+         <div class="price">₹600</div>
+      </div>
+      <div class="product fantasy" data-name="p-6">
+         <img src="image/quiet_imagine.jpg" alt="">
+         <h3>My Quite Imagination</h3>
+         <div class="price">₹390</div>
+      </div>
+      <div class="product history" data-name="p-7">
+         <img src="image/darkcrystal.jpg" alt="">
+         <h3>Dark Crystal</h3>
+         <div class="price">₹1400</div>
+      </div>
+      <div class="product fantasy" data-name="p-8">
+         <img src="image/beautyandthebeast.jpg" alt="">
+         <h3>Beauty and the beast</h3>
+         <div class="price">₹909</div>
+      </div>
+      <div class="product history" data-name="p-9">
+         <img src="image/blast-to-the-past-washington.jpg" alt="">
+         <h3>Blast to the past</h3>
+         <div class="price">₹800</div>
+      </div>
+
+      <div class="product history" data-name="p-10">
+         <img src="image/world.jpg" alt="">
+         <h3>World history</h3>
+         <div class="price">₹1999</div>
+      </div>
+      <div class="product history" data-name="p-11">
+         <img src="image/lostworld.jpg" alt="">
+         <h3>The lost world</h3>
+         <div class="price">₹1239</div>
+      </div>
+      <div class="product history" data-name="p-12">
+         <img src="image/journey.jpg" alt="">
+         <h3>A journey to the centre of the earth</h3>
+         <div class="price">₹1300</div>
+      </div>
+      <div class="product history" data-name="p-13">
+         <img src="image/alxendar.jpg" alt="">
+         <h3>Alexendar The Great!</h3>
+         <div class="price">₹900</div>
+      </div>
+      <div class="product history" data-name="p-14">
+         <img src="image/crystalworld.jpg" alt="">
+         <h3>the crystal world</h3>
+         <div class="price">₹1110</div>
+      </div>
+      <div class="product comdey" data-name="p-15">
+         <img src="image/horror1.jpg" alt="">
+         <h3>Mr.Pink whistle's party</h3>
+         <div class="price">₹1810</div>
+      </div>
+      <div class="product comdey" data-name="p-16">
+         <img src="image/mybookoffunnystories.jpg" alt="">
+         <h3>my book of funny stories</h3>
+         <div class="price">₹800</div>
+      </div>
+      <div class="product comdey" data-name="p-17">
+         <img src="image/funnybunnies.jpg" alt="">
+         <h3>Funny bunnies</h3>
+         <div class="price">₹600</div>
+      </div>
+      <div class="product comdey" data-name="p-18">
+         <img src="image/did.jpg" alt="">
+         <h3>did did what did you lick?</h3>
+         <div class="price">₹190</div>
+      </div>
+      <div class="product comdey" data-name="p-19">
+         <img src="image/crystalworld.jpg" alt="">
+         <h3>the crystal world</h3>
+         <div class="price">₹1110</div>
+      </div>
+      <div class="product adventure" data-name="p-20">
+         <img src="image/space-adventure-books.jpg" alt="">
+         <h3>space adventure</h3>
+         <div class="price">₹700</div>
+      </div>
+      <div class="product adventure" data-name="p-21">
+         <img src="image/ad1.jpg" alt="">
+         <h3>Best of the great parks</h3>
+         <div class="price">₹510</div>
+      </div>
+      <div class="product adventure" data-name="p-22">
+         <img src="image/ad2.jpg" alt="">
+         <h3>the magic of the unicorn</h3>
+         <div class="price">₹800</div>
+      </div>
+      <div class="product adventure" data-name="p-23">
+         <img src="image/ad3.jpg" alt="">
+         <h3>narnia</h3>
+         <div class="price">₹450</div>
+      </div>
+      <div class="product horror" data-name="p-24">
+         <img src="image/h1.jpg" alt="">
+         <h3>burnt offerings</h3>
+         <div class="price">₹850</div>
+      </div>
+      <div class="product horror" data-name="p-25">
+         <img src="image/h2.jpg" alt="">
+         <h3>those eyes</h3>
+         <div class="price">₹450</div>
+      </div>
+      <div class="product horror" data-name="p-26">
+         <img src="image/h3.jpg" alt="">
+         <h3>a house by the sea</h3>
+         <div class="price">₹350</div>
+      </div>
+   </div>
+</div>
+
+<div class="products-preview">
+   <div class="preview" data-target="p-1">
+      <i class="fas fa-times"></i>   
+      <img src="image/aladdin.png" alt="">
+      <h3>Aladdin</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹500</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-2">
+      <i class="fas fa-times"></i>
+      <img src="image/luca.jpg" alt="">
+      <h3>Luca: Adventure Awaits!</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹899</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-3">
+      <i class="fas fa-times"></i>
+      <img src="image/smthnglostfound.jpg" alt="">
+         <h3>Something Lost <br> Something Found</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹650</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-4">
+      <i class="fas fa-times"></i>
+      <img src="image/journeystar.jpg" alt="">
+         <h3>Journey to the stars</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹450</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+
+   <div class="preview" data-target="p-5">
+      <i class="fas fa-times"></i>
+      <img src="image/frozen.jpg" alt="">
+         <h3>Frozen</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹600</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-6">
+      <i class="fas fa-times"></i>
+      <img src="image/quiet_imagine.jpg" alt="">
+      <h3>My Quite Imagination</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹390</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-7">
+      <i class="fas fa-times"></i>
+      <img src="image/darkcrystal.jpg" alt="">
+      <h3>dark crystal</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹1400</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-8">
+      <i class="fas fa-times"></i>
+      <img src="image/beautyandthebeast.jpg" alt="">
+      <h3>Beauty and the beast</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹909</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-9">
+      <i class="fas fa-times"></i>
+      <img src="image/blast-to-the-past-washington.jpg" alt="">
+      <h3>blast to the past</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹800</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-10">
+      <i class="fas fa-times"></i>
+      <img src="image/world.jpg" alt="">
+      <h3>World history</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹1999</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-11">
+      <i class="fas fa-times"></i>
+      <img src="image/lostworld.jpg" alt="">
+      <h3>the lost world</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹1239</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-12">
+      <i class="fas fa-times"></i>
+      <img src="image/journey.jpg" alt="">
+      <h3>a journey to the centre of the earth</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹1300</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-13">
+      <i class="fas fa-times"></i>
+      <img src="image/alxendar.jpg" alt="">
+      <h3>Alexandar the great</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹900</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-14">
+      <i class="fas fa-times"></i>
+      <img src="image/crystalworld.jpg" alt="">
+      <h3>the crystal world</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹1110</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-15">
+      <i class="fas fa-times"></i>
+      <img src="image/horror1.jpg" alt="">
+      <h3>Mr.Pink whistle's party</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 250 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹1810</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-16">
+      <i class="fas fa-times"></i>
+      <img src="image/mybookoffunnystories.jpg" alt="">
+      <h3>my book of funny stories</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 230 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹800</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy"> Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+     <div class="preview" data-target="p-17">
+      <i class="fas fa-times"></i>
+      <img src="image/funnybunnies.jpg" alt="">
+      <h3>Funny bunnies</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 230 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹600</div>
+      <div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+     <div class="preview" data-target="p-19">
+      <i class="fas fa-times"></i>
+      <img src="image/crystalworld.jpg" alt="">
+      <h3>The Crystal World</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 230 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹1110</div><div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-20">
+      <i class="fas fa-times"></i>
+      <img src="image/space-adventure-books.jpg" alt="">
+      <h3>Space Adventure</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 230 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹700</div><div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-21">
+      <i class="fas fa-times"></i>
+      <img src="image/ad1.jpg" alt="">
+      <h3>Best of the great parks</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 230 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹510</div><div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+      <div class="preview" data-target="p-22">
+      <i class="fas fa-times"></i>
+      <img src="image/ad1.jpg" alt="">
+      <h3>the magic of the unicorn</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 230 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹800</div><div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-23">
+      <i class="fas fa-times"></i>
+      <img src="image/ad3.jpg" alt="">
+      <h3>narnia</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 230 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹450</div><div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-24">
+      <i class="fas fa-times"></i>
+      <img src="image/h1.jpg" alt="">
+      <h3>burnt offerings</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 230 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹850</div><div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-25">
+      <i class="fas fa-times"></i>
+      <img src="image/h2.jpg" alt="">
+      <h3>those eyes</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 230 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹450</div><div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+   <div class="preview" data-target="p-26">
+      <i class="fas fa-times"></i>
+      <img src="image/h3.jpg" alt="">
+      <h3>a house by the sea</h3>
+      <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i>
+         <span>( 230 )</span>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <div class="price">₹450</div><div class="buttons">
+         <a href="bookproducts.html" class="buy">Cancel</a>
+         <a href="buy.html" class="cart" onclick=" return alert('Cart is added successfully!');">add to cart</a>
+      </div>
+   </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<div id="cartItem">Your cart is empty</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="css/bookproductscss.css">
+   <script src="js/bookproductsjs.js" defer></script>   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.buttons').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        var filter = $(this).attr('data-filter')
+        if(filter == 'all'){
+            $('.product').show(400);
+        }else{
+            $('.product').not('.'+filter).hide(200);
+            $('.product').filter('.'+filter).show(400);
+        }
+    });
+
+    $('.container').magnificPopup({
+        delegate:'div',
+        type:'image',
+        container:{
+            enabled:true
+        }
+    });
+});
+
+</script>
+<body>
+   
+<div class="container">
+
+   <h3 class="title"> BOOKS COLLECTION </h3>
+   <ul class="controls">
+      <li class="buttons active" data-filter="all">all</li>
+      <li class="buttons" data-filter="ice-cream">ice-cream</li>
+      <li class="buttons" data-filter="chocolate">chocolate</li>
+      <li class="buttons" data-filter="cake">cake</li>
+      <li class="buttons" data-filter="juice">juice</li>
+      <li class="buttons" data-filter="sandwich">sandwich</li>
+  </ul>
+   <div class="products-container">
+
+      <div class="product ice-cream" data-name="p-1">
+         <img src="image/aladdin.png" alt="">
+         <h3>Aladdin</h3>
+         <div class="price">₹500</div>
+      </div>
+
+      <div class="product ice-cream" data-name="p-2">
+         <img src="image/quiet_imagine.jpg" alt="">
+         <h3>My Quite Imagination</h3>
+         <div class="price">₹390</div>
+      </div>
+
+      <div class="product chocolate" data-name="p-3">
+         <img src="image/smthnglostfound.jpg" alt="">
+         <h3>Something Lost <br> Something Found</h3>
+         <div class="price">₹650</div>
+      </div>
+
+      <div class="product chocolate" data-name="p-4">
+         <img src="image/journeystar.jpg" alt="">
+         <h3>Journey to the stars</h3>
+         <div class="price">₹450</div>
+      </div>
+
+      <div class="product" data-name="p-5">
+         <img src="image/frozen.jpg" alt="">
+         <h3>Frozen</h3>
+         <div class="price">₹600</div>
+      </div>
+
+      <div class="product" data-name="p-6">
+         <img src="image/luca.jpg" alt="">
+         <h3>Luca: Adventure Awaits!</h3>
+         <div class="price">₹899</div>
+      </div>
+
+   </div>
+
+</div>
